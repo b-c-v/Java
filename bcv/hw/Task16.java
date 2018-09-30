@@ -13,7 +13,6 @@ public class Task16 {
 
         float fahrenheit = ((float)1.8 * celsius) + 32;
         System.out.println("The temperature is " + fahrenheit + " Fahrenheits");
-
     }
 
 }
