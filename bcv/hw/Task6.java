@@ -9,9 +9,9 @@ public class Task6 {
 
     public static void array() {
         double a[] = new double [10];
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < a.length; i++) {
             double b =  (i + (i * 0.1));
-            System.out.println("If in crease " + i + " by 10%. The result is " + b);
+            System.out.println("If crease " + i + " by 10%. The result is " + b);
         }
 
     }
