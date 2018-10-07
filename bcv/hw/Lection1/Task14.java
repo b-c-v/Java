@@ -1,4 +1,4 @@
-package com.bcv.hw;
+package com.bcv.hw.Lection1;
 
 import java.util.Scanner;
 

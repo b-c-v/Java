@@ -7,7 +7,7 @@
         4. Сдвиг точки по оси X на заданную величину.
         5. Такой же сдвиг по оси Y.
         6. Два метода для получения X- и Y-координаты точки.*/
-package com.bcv.hw;
+package com.bcv.hw.Lection4;
 
 import java.awt.*;
 import java.awt.geom.Point2D;

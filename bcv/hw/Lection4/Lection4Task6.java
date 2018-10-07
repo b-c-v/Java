@@ -1,7 +1,7 @@
 /*Разобратся в одном из методов сортировки массива и написать реализацию.
 Сортировка пузырьком, выборкой, вставкой.*/
 
-package com.bcv.hw;
+package com.bcv.hw.Lection4;
 
 public class Lection4Task6 {
     public static void main(String[] args) {

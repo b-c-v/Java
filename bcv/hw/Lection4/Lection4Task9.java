@@ -1,6 +1,6 @@
 //Преобразовать строку в массив байтов и обратно.
 
-package com.bcv.hw;
+package com.bcv.hw.Lection4;
 
 import java.util.Arrays;
 import java.util.Scanner;

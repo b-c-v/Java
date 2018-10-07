@@ -1,6 +1,6 @@
 //Написать бесконечный цикл для for, while, do while
 
-package com.bcv.hw;
+package com.bcv.hw.Lection4;
 
 public class Lection4Task3 {
     public static void main(String[] args) {

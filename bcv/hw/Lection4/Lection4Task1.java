@@ -9,7 +9,7 @@
 печатать аргумент и значение синуса и косинуса.
 */
 
-package com.bcv.hw;
+package com.bcv.hw.Lection4;
 
 import java.util.Scanner;
 

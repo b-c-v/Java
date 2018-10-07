@@ -1,6 +1,6 @@
 /* Напишите метод проверки, является ли строка палиндромом.*/
 
-package com.bcv.hw;
+package com.bcv.hw.Lection4;
 
 
 import java.util.Scanner;

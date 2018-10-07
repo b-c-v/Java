@@ -1,4 +1,4 @@
-package com.bcv.hw;
+package com.bcv.hw.Lection1;
 
 //Напишите программу которая определяет какое из чисел больше
 

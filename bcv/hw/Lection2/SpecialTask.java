@@ -1,10 +1,10 @@
-package com.bcv.hw;
+package com.bcv.hw.Lection2;
 
 //Найти наибольший общий делитель числа (НОД)
 
 import java.util.Scanner;
 
-public class SpecialTaskLesson2 {
+public class SpecialTask {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Enter first number: ");

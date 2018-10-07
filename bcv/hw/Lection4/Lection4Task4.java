@@ -1,6 +1,6 @@
 //Изменить SymbolTest.java так, чтобы количество генерируемых символов задавалось пользователем.
 
-package com.bcv.hw;
+package com.bcv.hw.Lection4;
 
 import java.util.Scanner;
 

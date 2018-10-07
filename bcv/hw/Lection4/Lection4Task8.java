@@ -1,6 +1,6 @@
 //Напишите метод удаления заданного символа из строки.
 
-package com.bcv.hw;
+package com.bcv.hw.Lection4;
 
 
 import java.util.Scanner;

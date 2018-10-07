@@ -1,4 +1,4 @@
-package com.bcv.hw;
+package com.bcv.hw.Lection1;
 
 //Сделайте программу, которая будет проверять является ли число типа double целым.
 
