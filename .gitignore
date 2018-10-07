@@ -1,16 +1,10 @@
-# Compiled class file
+# Ignore all class files
 *.class
 
-# Log file
+# Ignore all Log files
 *.log
 
-# BlueJ files
-*.ctxt
-
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
-
-# Package Files #
+# Ignore Package Files #
 *.jar
 *.war
 *.nar
