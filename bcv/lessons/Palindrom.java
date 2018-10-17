@@ -22,7 +22,7 @@ public class Palindrom {
         if (origin == revers) {
             System.out.println("Palindrome");
         } else {
-            System.out.println("Ne palindrome");
+            System.out.println("No palindrome");
         }
     }
 }

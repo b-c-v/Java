@@ -7,7 +7,7 @@ public class PrimeProstoe {
         Scanner push = new Scanner(System.in);
         System.out.print("Enter number: ");
         int number = push.nextInt();
-        int mark = 0; //?если здесь не указать =0 внизу пишет, что данная переменная не инициализирована
+        int mark = 0;
         for (int i = 2; i <=Math.sqrt(number); i++) {
             if (number % i == 0) {
                 mark = 1;
