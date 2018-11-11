@@ -5,20 +5,20 @@ package com.bcv.hw.Lection4;
 
 public class Lection4Task6 {
     public static void main(String[] args) {
-        int arr[] = new int[10];
+        int [] arr = new int[10];
         for (int i = 0; i < arr.length; i++) {
             //элементу массива присваивается случайное число от 0 до 99
             arr[i] = (int) (Math.random() * 100);
             System.out.print(arr[i] + " ");
         }
-        System.out.println("");
-        System.out.println("Selection Sort");
+
+        System.out.println("\nSelection Sort");
         selectionSort(arr);
-        System.out.println("");
-        System.out.println("Bubble Sort");
+
+        System.out.println("\nBubble Sort");
         bubbleSort(arr);
-        System.out.println("");
-        System.out.println("Into Sort");
+
+        System.out.println("\nInto Sort");
         insertSort(arr);
     }
 

@@ -1,18 +1,20 @@
 package com.bcv.lessons;
-
+//lection 3 part 1
 public class Recursion {
     public static void main(String[] args) {
-        methotRecursion(1);
+        methodRecursion(1);
     }
 
-    private static void methotRecursion(int arg) {
+    private static void methodRecursion(int arg) {
         System.out.print(arg + " ");
         if (arg < 7) {
             //call method inside himself
-            methotRecursion(2 * arg);
+            methodRecursion(2 * arg);
         }
 
         System.out.print(arg + " ");
 
     }
+
+
 }
