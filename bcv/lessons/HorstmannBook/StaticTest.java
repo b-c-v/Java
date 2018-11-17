@@ -1,7 +1,8 @@
-package com.bcv.lessons;
+package com.bcv.lessons.HorstmannBook;
 
 /**
  * This program demonstrates static methods.
+ * Listing 4.3
  */
 
 public class StaticTest {
