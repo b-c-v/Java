@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.bcv.FinalProject.WeldingCalculator">
+  <grid id="27dc6" binding="mainPanel" layout-manager="GridLayoutManager" row-count="9" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+    <margin top="0" left="0" bottom="0" right="0"/>
+    <constraints>
+      <xy x="20" y="20" width="712" height="400"/>
+    </constraints>
+    <properties>
+      <enabled value="true"/>
+      <toolTipText value=""/>
+    </properties>
+    <border type="empty" title="Калькулятор расчета сварочных материалов" title-justification="2" title-position="2">
+      <font/>
+    </border>
+    <children>
+      <component id="83881" class="javax.swing.JTextField" binding="result">
+        <constraints>
+          <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="150" height="-1"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="fd9cd" class="javax.swing.JSpinner" binding="sizeGap">
+        <constraints>
+          <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <inheritsPopupMenu value="false"/>
+        </properties>
+        <clientProperties>
+          <html.disable class="java.lang.Boolean" value="false"/>
+        </clientProperties>
+      </component>
+      <component id="635c4" class="javax.swing.JButton" binding="calculate">
+        <constraints>
+          <grid row="7" column="0" row-span="1" col-span="2" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Рассчитать количество сварочных материалов, кг"/>
+        </properties>
+      </component>
+      <component id="70e8d" class="javax.swing.JSpinner" binding="sizeLengthWeldJoint">
+        <constraints>
+          <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties/>
+        <clientProperties>
+          <html.disable class="java.lang.Boolean" value="false"/>
+        </clientProperties>
+      </component>
+      <component id="8e8ef" class="javax.swing.JComboBox" binding="weldingPosition">
+        <constraints>
+          <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="15" height="10"/>
+          </grid>
+        </constraints>
+        <properties>
+          <model>
+            <item value="нижнее"/>
+            <item value="вертикальное"/>
+            <item value="потолочное"/>
+          </model>
+        </properties>
+      </component>
+      <component id="51c51" class="javax.swing.JLabel" binding="labelWeldingPosition">
+        <constraints>
+          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Положение при сварке"/>
+        </properties>
+      </component>
+      <component id="30b85" class="javax.swing.JLabel" binding="labelWallThickness">
+        <constraints>
+          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Толщина свариваемых деталей, мм"/>
+        </properties>
+      </component>
+      <component id="34b38" class="javax.swing.JLabel" binding="labelGap">
+        <constraints>
+          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <labelFor value="fd9cd"/>
+          <text value="Зазор, мм"/>
+        </properties>
+      </component>
+      <component id="b41eb" class="javax.swing.JLabel" binding="labelLengthWeldJoint">
+        <constraints>
+          <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Длина сварного шва, мм"/>
+        </properties>
+      </component>
+      <component id="5885e" class="javax.swing.JSpinner" binding="sizeWallThickness">
+        <constraints>
+          <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <verifyInputWhenFocusTarget value="true"/>
+        </properties>
+        <clientProperties>
+          <html.disable class="java.lang.Boolean" value="false"/>
+        </clientProperties>
+      </component>
+      <component id="d6361" class="javax.swing.JLabel" binding="labelWeldProcedure">
+        <constraints>
+          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Способ сварки"/>
+        </properties>
+      </component>
+      <component id="44201" class="javax.swing.JComboBox" binding="weldProcedure">
+        <constraints>
+          <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="TIG"/>
+            <item value="MIG"/>
+            <item value="MAG"/>
+            <item value="MMA"/>
+            <item value="SAW"/>
+          </model>
+        </properties>
+      </component>
+      <component id="33f14" class="javax.swing.JLabel" binding="labelStandardWeldingJoint">
+        <constraints>
+          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Стандарт на тип сварного соединения"/>
+        </properties>
+      </component>
+      <component id="eb445" class="javax.swing.JTextField" binding="standardWeldingJoint">
+        <constraints>
+          <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <editable value="false"/>
+          <text value="ГОСТ 14771-76"/>
+        </properties>
+      </component>
+      <component id="da3e5" class="javax.swing.JLabel" binding="labelTypeWeldingJoint">
+        <constraints>
+          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Тип сварного соединения"/>
+        </properties>
+      </component>
+      <component id="c7a2" class="javax.swing.JComboBox" binding="typeWeldingJoint">
+        <constraints>
+          <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <model>
+            <item value="стыковое"/>
+            <item value="угловое"/>
+            <item value="тавровое"/>
+            <item value="нахлесточное"/>
+          </model>
+          <popupVisible value="false"/>
+        </properties>
+      </component>
+      <component id="efe0" class="javax.swing.JLabel" binding="imageLabel">
+        <constraints>
+          <grid row="0" column="2" row-span="9" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <icon value="com/bcv/FinalProject/index.jpg"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="5818b" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <text value="Количество сварочных материалов, кг"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>

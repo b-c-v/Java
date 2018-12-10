@@ -1,6 +1,10 @@
 package com.bcv.lessons.GuiForms;
 
+import com.intellij.uiDesigner.core.GridConstraints;
+import com.intellij.uiDesigner.core.GridLayoutManager;
+
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -62,5 +66,6 @@ public class ComboBox extends JFrame {
 
 
     }
+
 }
 
