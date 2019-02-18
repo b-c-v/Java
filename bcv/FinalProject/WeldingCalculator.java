@@ -1,6 +1,6 @@
-package com.bcv.FinalProject;
+package com.bcv.finalProject;
 
-import com.bcv.FinalProject.FlatArea.ButtJoint;
+import com.bcv.finalProject.FlatArea.ButtJoint;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

@@ -1,4 +1,4 @@
-package com.bcv.FinalProject;
+package com.bcv.finalProject;
 
 
 public class Calculator {

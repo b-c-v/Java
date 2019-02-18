@@ -1,4 +1,4 @@
-package com.bcv.FinalProject.FlatArea;
+package com.bcv.finalProject.FlatArea;
 
 
 public final class ButtJoint {

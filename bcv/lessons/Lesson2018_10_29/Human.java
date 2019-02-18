@@ -3,7 +3,7 @@ package com.bcv.lessons.Lesson2018_10_29;
 public class Human {
     public enum Sex {
         MALE,
-        FEMALE;
+        FEMALE
     }
 
     private int age;

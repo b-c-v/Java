@@ -11,7 +11,7 @@ public class Lesson2018_10_01 {
     public void hate() {
         String our = "Our";
         hated = "Govno "+
-        hated.substring(hated.indexOf(our) + our.length() + 1, hated.length());
+        hated.substring(hated.indexOf(our) + our.length() + 1);
         System.out.println(hated);
     }
 

@@ -1,4 +1,4 @@
-package com.bcv.FinalProject;
+package com.bcv.finalProject;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -213,9 +213,9 @@ public class testFormNetbeans extends javax.swing.JFrame {
                                 .addContainerGap())
         );
 
-        mainPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {labelLengthWeldJoint, labelResult, labelStandardWeldingJoint, labelTypeWeldingJoint, labelWeldProcedure, labelWeldingPosition});
+        mainPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, labelLengthWeldJoint, labelResult, labelStandardWeldingJoint, labelTypeWeldingJoint, labelWeldProcedure, labelWeldingPosition);
 
-        mainPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {result, sizeLengthWeldJoint, standardWeldingJoint, weldProcedure, weldingPosition});
+        mainPanelLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, result, sizeLengthWeldJoint, standardWeldingJoint, weldProcedure, weldingPosition);
 
         mainPanelLayout.setVerticalGroup(
                 mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -251,7 +251,7 @@ public class testFormNetbeans extends javax.swing.JFrame {
                                 .addGap(29, 29, 29))
         );
 
-        mainPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {labelLengthWeldJoint, labelResult, labelStandardWeldingJoint, labelWeldProcedure, labelWeldingPosition, result, sizeLengthWeldJoint, standardWeldingJoint, weldProcedure, weldingPosition});
+        mainPanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, labelLengthWeldJoint, labelResult, labelStandardWeldingJoint, labelWeldProcedure, labelWeldingPosition, result, sizeLengthWeldJoint, standardWeldingJoint, weldProcedure, weldingPosition);
 
         parameters.setBorder(javax.swing.BorderFactory.createTitledBorder(""));
 
@@ -408,7 +408,7 @@ public class testFormNetbeans extends javax.swing.JFrame {
                                                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
         );
 
-        parametersLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {sizeAlpha, sizeB, sizeBeta, sizeC, sizeE, sizeE1, sizeG, sizeG1, sizeH, sizeK, sizeK1, sizeR, sizeS});
+        parametersLayout.linkSize(javax.swing.SwingConstants.HORIZONTAL, sizeAlpha, sizeB, sizeBeta, sizeC, sizeE, sizeE1, sizeG, sizeG1, sizeH, sizeK, sizeK1, sizeR, sizeS);
 
         parametersLayout.setVerticalGroup(
                 parametersLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -570,7 +570,7 @@ public class testFormNetbeans extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.

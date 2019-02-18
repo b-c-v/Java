@@ -1,4 +1,4 @@
-package com.bcv.FinalProject.Exceptions;
+package com.bcv.finalProject.Exceptions;
 
 public class UnsupportedException extends Exception {
     /*экспепшн можно добавить к JSpinner
