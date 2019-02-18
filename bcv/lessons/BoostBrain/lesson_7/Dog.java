@@ -1,4 +1,4 @@
-package lesson_7;
+package com.bcv.lessons.BoostBrain.lesson_7;
 
 // класс собаки расширает класс животного
 public class Dog extends Animal {
