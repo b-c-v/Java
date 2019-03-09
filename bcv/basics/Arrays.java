@@ -60,6 +60,8 @@ public class Arrays {
         }
     }
 
+
+
     public static void main(String[] args) {
 
         // создадим массив из 5 элементов
@@ -109,14 +111,16 @@ public class Arrays {
         System.out.println(stringArray[0][1]);
 
         //в качестве указателя может использоваться char (он приводится к int), byte, short, int
-        int y = 30;
+        int y = 10;
         char arrayChar = 'r';
         int[][][] array = new int[3][arrayChar]['b'];
         array[1][0] = new int[y];
         for (int i = 0; i < y; i++) {
-            array[1][0][i] = (int) Math.random() * 10;
-            System.out.println(array[1][0][i]);
+            array[1][0][i] = (int)(Math.random() * 10);
+            System.out.print (array[1][0][i] + " ");
+
         }
+
 
 
     }
@@ -128,4 +132,7 @@ Name: Ivan money: 165.0
 Name: Dima money: 110.0
 Name: Maksim money: 110.0
 Name: Yura money: 110.0
+все массивы при создании заполняются 0 или null:[[I@74a14482
+null
+6 2 7 7 8 9 6 9 4 3
 */

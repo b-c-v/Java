@@ -3,23 +3,35 @@
 
 package com.bcv.homeWorkLemon.Lection4;
 
+import java.util.Arrays;
+
 public class Lection4Task6 {
     public static void main(String[] args) {
-        int [] arr = new int[10];
+        int[] arr = new int[30];
         for (int i = 0; i < arr.length; i++) {
             //элементу массива присваивается случайное число от 0 до 99
             arr[i] = (int) (Math.random() * 100);
-            System.out.print(arr[i] + " ");
+//            System.out.print(arr[i] + " ");
         }
 
+
         System.out.println("\nSelection Sort");
+        long t1 = System.currentTimeMillis();
         selectionSort(arr);
+        long t2 = System.currentTimeMillis();
+        System.out.println("selection: " + (t2 - t1)); //8500ms if massive length 100_000
 
         System.out.println("\nBubble Sort");
+        long t3 = System.currentTimeMillis();
         bubbleSort(arr);
+        long t4 = System.currentTimeMillis();
+        System.out.println("bubble: " + (t4 - t3)); //25435ms if massive length 100_000
 
         System.out.println("\nInto Sort");
+        long t5 = System.currentTimeMillis();
         insertSort(arr);
+        long t6 = System.currentTimeMillis();
+        System.out.println("insert: " + (t6-t5)); //2352ms if massive length 100_000
     }
 
 
@@ -44,14 +56,14 @@ public class Lection4Task6 {
                 arr[barrierSelection] = arr[min_i];
                 arr[min_i] = tmp;
             }
-            System.out.print(arr[barrierSelection] + " ");
         }
+        System.out.println(Arrays.toString(arr));
     }
 
     // СОРТИРОВКА ПУЗЫРЬКОМ
     public static void bubbleSort(int[] arr) {
         // Внешний цикл каждый раз сокращает фрагмент массива, так как внутренний цикл каждый раз ставит в конец фрагмента максимальный элемент
-        for (int barrierBubble = arr.length - 1; barrierBubble > 0; barrierBubble--) {
+        for (int barrierBubble = arr.length - 1; barrierBubble >= 0; barrierBubble--) {
             for (int j = 0; j < barrierBubble; j++) {
                 // Сравниваем элементы попарно, если они имеют неправильный порядок, то меняем местами
                 if (arr[j] > arr[j + 1]) {
@@ -60,26 +72,25 @@ public class Lection4Task6 {
                     arr[j + 1] = tmp;
                 }
             }
-            System.out.print(arr[barrierBubble] + " ");
         }
-
+        System.out.println(Arrays.toString(arr));
     }
 
     //СОРТИРОВКА ВСТАВКОЙ
     private static void insertSort(int[] arr) {
 
-        for (int i = 1; i < arr.length; i++) {
-            int key = arr[i];
-            int j = i - 1;
 
-            // Move elements of arr[0..i-1], that are greater than key, to one position ahead of their current position
-            while (j >= 0 && arr[j] > key) {
-                arr[j + 1] = arr[j];
-                j = j - 1;
+        int i, j, newValue;
+        for (i = 1; i < arr.length; i++) {
+            newValue = arr[i];
+            j = i;
+            while (j > 0 && arr[j - 1] > newValue) {
+                arr[j] = arr[j - 1];
+                j--;
             }
-
-            arr[j + 1] = key;
-            System.out.print(arr[i] + " ");
+            arr[j] = newValue;
         }
+        System.out.println(Arrays.toString(arr));
     }
 }
+

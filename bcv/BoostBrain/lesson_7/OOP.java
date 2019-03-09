@@ -17,8 +17,8 @@ package com.bcv.BoostBrain.lesson_7;
 2. Всего модификаторов доступа 4:
 a. public - публичный, видимый отовсюду
 b. protected - защищенный, видимый только потомкам
-c. private - приватный, видимый только изнутри класса
-d. default, package-private - по умолчанию, видимый изнутри всех классов одного пакета
+c. default, package-private - по умолчанию, видимый изнутри всех классов одного пакета
+d. private - приватный, видимый только изнутри класса
 */
 
 public class OOP {
@@ -31,8 +31,8 @@ public class OOP {
 	// 3 полиморфиз - вместо класса dog вписываем класс animal. Экземпляр dog и cat являются потомками класса animal
 	Animal dog = new Dog();
 	Animal cat = new Cat();
-	
-	
+
+
 	// в классе собака и кошка появилась переменная name, хотя классы пусты
 	// dog.name = "Krepish";
 	// cat.name = "Belka";
@@ -45,11 +45,11 @@ public class OOP {
 	cat.setName("Belka");
 	System.out.println(dog.getName());
 	System.out.println(cat.getName());
-	
+
 	//3 вызываем голоса животных
 	System.out.println(dog.voice());
 	System.out.println(cat.voice());
-	
+
 
     }
 }
