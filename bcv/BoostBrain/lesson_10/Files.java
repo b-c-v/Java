@@ -34,6 +34,7 @@ package com.bcv.BoostBrain.lesson_10;
 5. ВАЖНО! После того, как мы завершили запись в файл, его необоходимо закрыть
 */
 //для того начать работать с классом файл - его нужно импортировать
+
 import java.io.File;
 
 //2 для того чтобы прочитать содержимое файла имортируем класс
@@ -48,58 +49,58 @@ import java.io.FileOutputStream;
 
 
 public class Files {
-//3 добавляем исключения trhows FileNotFoundException, IOException
+    //3 добавляем исключения trhows FileNotFoundException, IOException
     public static void main(String[] args) throws IOException {
-	
-	
+
+
 //создаем объект файла, который соответствует нашему текущему каталогу. В качестве имени указываем точку (т.е. принятое обозначение текущего каталога)
-	File dir = new File(".");
-	
+        File dir = new File(".");
+
 //для просмотра содержимого каталоги используется метод list, который возращаем массив строк
-	String[] names = dir.list();
-	
+        String[] names = dir.list();
+
 // создаем цикл, который проходит по всему массиву names и выводим все имена из массива. Т.е. выводым содержимое текущего каталога
-	for (int i = 0; i < names.length; i++) {
-	    System.out.println("Содержимое каталога " +names[i]);
-	}
-	
+        for (int i = 0; i < names.length; i++) {
+            System.out.println("Содержимое каталога " + names[i]);
+        }
+
 //получаем информацию о файле lesson10.txt. Создаем объект типа file.
-	File file = new File("lesson10.txt");
+        File file = new File("lesson10.txt");
 //выводим длину файла с помощью метода .length, который возвращает значение типа long
-	System.out.println("Длина файла " + file.length());
+        System.out.println("Длина файла " + file.length());
 
 //2 читаем файл. Используем класс FileInputStream (импортируем его). Создаем объект класса FileInputStream с именем input. В качестве входящего параметра указываем file длину которого вычисляли
 //3 для того чтобы код работал надо добавить исключение FileNotFoundException
-	FileInputStream input = new FileInputStream(file);
+        FileInputStream input = new FileInputStream(file);
 //проверяем сколько байт доступно для чтения и выводим на экран. Создаем переменную length и присвоем ей то, что возвращает метод available
 //4 для того чтобы кода работа надо добавить исключение java.io.IOException
-	int length = input.available();
-		System.out.println("Читаем файл " +length);
+        int length = input.available();
+        System.out.println("Читаем файл " + length);
 
 //прочитаем данные файла. Создаем массив byte с именем data длиной length
-	byte[] data = new byte[length];
+        byte[] data = new byte[length];
 //вызываем метод read и указываем массив data в который надо прочитать эти данные
-	input.read(data);
+        input.read(data);
 //создаем цикл в котором проходим весь массив с именем data и выводим все значения
-	for (int i = 0; i < data.length; i++) {
-	System.out.println("Содержимое файла " +data[i]);
+        for (int i = 0; i < data.length; i++) {
+            System.out.println("Содержимое файла " + data[i]);
 
 //преобразовываем байтовый массив в текст и выводим
 //создаем объект типа String с именем text с помощью конструктора new типа String принимающего байтовый массив.
-	    String text = new String(data);
-	    System.out.println("Текст в файле: " + text);
+            String text = new String(data);
+            System.out.println("Текст в файле: " + text);
 
 //пример внесение записи в файл. Создаем объект класса FileOutputStream (импортируем его) в качестве параметров передаем объект типа file. Параметр true необходим, чтобы файл не переписывался а заполнялся.
-	    FileOutputStream output = new FileOutputStream(file, true);
-	    String newText = "Hello world files";
+            FileOutputStream output = new FileOutputStream(file, true);
+            String newText = "Hello world files";
 //преобразовываем объект типа String в байтовый массив с помощью метода getBytes(), который возвращает массив байтов
 //создаем массив с именем newTextBytes
-	    byte[] newTextBytes = newText.getBytes();
+            byte[] newTextBytes = newText.getBytes();
 //берем объект и записываем туда новый массив newTextBytes
-	    output.write(newTextBytes);
+            output.write(newTextBytes);
 //закрываем файл после записи
-	    output.close();
-	}
+            output.close();
+        }
     }
 
 }

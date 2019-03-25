@@ -31,7 +31,7 @@ public class Lection4Task6 {
         long t5 = System.currentTimeMillis();
         insertSort(arr);
         long t6 = System.currentTimeMillis();
-        System.out.println("insert: " + (t6-t5)); //2352ms if massive length 100_000
+        System.out.println("insert: " + (t6 - t5)); //2352ms if massive length 100_000
     }
 
 
@@ -63,8 +63,8 @@ public class Lection4Task6 {
     // СОРТИРОВКА ПУЗЫРЬКОМ
     public static void bubbleSort(int[] arr) {
         // Внешний цикл каждый раз сокращает фрагмент массива, так как внутренний цикл каждый раз ставит в конец фрагмента максимальный элемент
-        for (int barrierBubble = arr.length - 1; barrierBubble >= 0; barrierBubble--) {
-            for (int j = 0; j < barrierBubble; j++) {
+        for (int i = arr.length - 1; i >= 0; i--) {
+            for (int j = 0; j < i; j++) {
                 // Сравниваем элементы попарно, если они имеют неправильный порядок, то меняем местами
                 if (arr[j] > arr[j + 1]) {
                     int tmp = arr[j];
@@ -80,10 +80,10 @@ public class Lection4Task6 {
     private static void insertSort(int[] arr) {
 
 
-        int i, j, newValue;
-        for (i = 1; i < arr.length; i++) {
+        int newValue;
+        for (int i = 1; i < arr.length; i++) {
             newValue = arr[i];
-            j = i;
+            int j = i;
             while (j > 0 && arr[j - 1] > newValue) {
                 arr[j] = arr[j - 1];
                 j--;

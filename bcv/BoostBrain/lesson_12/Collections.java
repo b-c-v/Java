@@ -1,4 +1,4 @@
-package lesson_12;
+package com.bcv.BoostBrain.lesson_12;
 
 /*
 1. Коллекция - это структурированные хранилища однотипных объектов.
@@ -30,6 +30,7 @@ package lesson_12;
       
 3. Такая форма цикла повзоляет перебрать все элементы массива, списка или множества.
 */
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -41,85 +42,75 @@ public class Collections {
 
     public static void main(String[] args) throws IOException {
 
-	// загружаем данные из файла в память
-	FileInputStream stream = new FileInputStream(
-		// при написании пути к файлу используем / а не так как принято в виндовс
-		"d:/program/eclipse/eclipse-workspace/BoostBrain/src/lesson_12/moscow-buildings.csv");
-	// узнаем длину файла с помощью команды available
-	int length = stream.available();
-	// создаем байтовый массив и указываем длину length
-	byte[] data = new byte[length];
-	// читаем массив
-	stream.read(data);
+        // загружаем данные из файла в память
+        FileInputStream stream = new FileInputStream(
+                "d:/program/eclipse/eclipse-workspace/BoostBrain/src/lesson_12/moscow-buildings.csv"); // при написании пути к файлу используем / а не так как принято в виндовс
+        int length = stream.available();// узнаем длину файла с помощью команды available
+        byte[] data = new byte[length]; // создаем байтовый массив и указываем длину length
+        stream.read(data);// читаем массив
 
-	// преобразовываем байтовые данные в текст. Создаем новый объект String командой
-	// new и в конструкторе указываем данные data которые скачали из файла
-	String text = new String(data);
-	// выводим на экран текстовые данные которые получили
-	// System.out.println(text);
+        String text = new String(data);// преобразовываем байтовые данные в текст. Создаем новый объект String командой new и в конструкторе указываем данные data которые скачали из файла
 
-	// 2 создаем контейнер т.е. список который содержит в себе массив с именем
-	// LineWords
-	ArrayList<String[]> lineWords = new ArrayList<>();
-	// текст разбиваем на строки с помощью команды split (в качестве разделителя
-	// указываем новую строку \n) которая возращает массив строк
-	String[] lines = text.split("\n");
-	// выводим текст с помощью цикла
-	for (String line : lines) {
+        // System.out.println(text); // выводим на экран текстовые данные которые получили
 
-	    // System.out.println(line);
-	    // добавляем метку, чтобы было видно наглядно что выводим построчно
-	    // System.out.println("-----------------");
+        // 2 создаем контейнер т.е. список который содержит в себе массив с именем LineWords
+        ArrayList<String[]> lineWords = new ArrayList<>();
 
-	    // делим строки на отдельные слова. Полученную строку командой split разбиваем и
-	    // указываем , в качестве разделителя. Split возвращаем массив слов
-	    String[] words = line.split(",");
-	    // 2 сохраняем массив отдельных слов в наш список командой add
-	    lineWords.add(words);
-	}
+        String[] lines = text.split("\n"); // текст разбиваем на строки с помощью команды split (в качестве разделителя указываем новую строку \n) которая возращает массив строк
+        // выводим текст с помощью цикла
+        for (String line : lines) {
 
-	/*
-	 * // 2 выведем отдельные слова с помощью цикла for (String[] words : lineWords)
-	 * { // 2 делаем вложенный цикл, который перебирает отдельные слова. for (String
-	 * word : words) { //2 выводим на экран слова отделяя их | и отделяя строки ----
-	 * System.out.print(word); System.out.print("|"); } System.out.println("----");
-	 * }
-	 */
+            // System.out.println(line); // добавляем метку, чтобы было видно наглядно что выводим построчно
+            // System.out.println("-----------------");
 
-	/*
-	 * //3 выводим строки в которых год 1999 (это 10 столбец или 9 место в массиве)
-	 * for (String[] words : lineWords) { if (words[9].equals("1999")) { for (String
-	 * word : words){ System.out.print(word); System.out.print("|"); }
-	 * System.out.println("----");
-	 */
+
+            String[] words = line.split(",");// делим строки на отдельные слова. Полученную строку командой split разбиваем и указываем , в качестве разделителя. Split возвращаем массив слов
+
+            lineWords.add(words); // 2 сохраняем массив отдельных слов в наш список командой add
+        }
+
+        /*
+         * // 2 выведем отдельные слова с помощью цикла for (String[] words : lineWords)
+         * { // 2 делаем вложенный цикл, который перебирает отдельные слова. for (String
+         * word : words) { //2 выводим на экран слова отделяя их | и отделяя строки ----
+         * System.out.print(word); System.out.print("|"); } System.out.println("----");
+         * }
+         */
+
+        /*
+         * //3 выводим строки в которых год 1999 (это 10 столбец или 9 место в массиве)
+         * for (String[] words : lineWords) { if (words[9].equals("1999")) { for (String
+         * word : words){ System.out.print(word); System.out.print("|"); }
+         * System.out.println("----");
+         */
 
 	/*// 4 создаем асоциативный массив. Считаем количество домов построенных в 1999 году.
 	HashMap<String, Integer> map = new HashMap<String, Integer>();*/
-	
-	// 5 создаем структурированный массив, который считает количество домов построенных в каждом году
-	TreeMap<String, Integer> map = new TreeMap<String, Integer>();
-	
-	//общий код для 4 и 5 пунктов
-	for (String[] words : lineWords) {
-	    // если в карте присутствует значение, которое есть в words[9] т.е. в 10 столбце
-	    if (map.containsKey(words[9])) {
-		Integer k = map.get(words[9]);
-		// количество домов, если уже существует увеличивается на 1
-		k = k + 1;
-		// кладем значение k обратно
-		map.put(words[9], k);
-		// если такого значения в карте небыло кладем туда 1
-	    } else {
-		map.put(words[9], 1);
-	    }
 
-	    System.out.println(map.get("1999"));
+        // 5 создаем структурированный массив, который считает количество домов построенных в каждом году
+        TreeMap<String, Integer> map = new TreeMap<String, Integer>();
 
-	    // 5 смотрим количество домов построенных в каждом отдельном году. В карте есть метод keySet который возвращает все ключи т.е. содержит в себе множество всех ключей.
-	    for (String key : map.keySet()) {
-		System.out.println("Year: " + key + " Count:" + map.get(key));
-	    }
-	}
+        //общий код для 4 и 5 пунктов
+        for (String[] words : lineWords) {
+            // если в карте присутствует значение, которое есть в words[9] т.е. в 10 столбце
+            if (map.containsKey(words[9])) {
+                Integer k = map.get(words[9]);
+                // количество домов, если уже существует увеличивается на 1
+                k = k + 1;
+                // кладем значение k обратно
+                map.put(words[9], k);
+                // если такого значения в карте небыло кладем туда 1
+            } else {
+                map.put(words[9], 1);
+            }
+
+            System.out.println(map.get("1999"));
+
+            // 5 смотрим количество домов построенных в каждом отдельном году. В карте есть метод keySet который возвращает все ключи т.е. содержит в себе множество всех ключей.
+            for (String key : map.keySet()) {
+                System.out.println("Year: " + key + " Count:" + map.get(key));
+            }
+        }
 
     }
 }
