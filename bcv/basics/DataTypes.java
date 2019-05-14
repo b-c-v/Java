@@ -3,7 +3,7 @@ package com.bcv.basics;
 public class DataTypes {
     public static void main(String[] args) {
 
-//         целочисленные (byte 8bit; short 16bit; int 32bit; long 64bit):
+    //целочисленные (byte 8bit; short 16bit; int 32bit; long 64bit):
         byte bp = 127;
         byte bn = -128;
         short sp = 32767;
@@ -13,30 +13,31 @@ public class DataTypes {
         long lp = 9223372036854775807l; //CE !always suffixing whit small "l" or capital "L"
         long ln = -9223372036854775808L;
 
-//         числа с плавающей точкой (float 32bit; double 64bit)
+    //числа с плавающей точкой (float 32bit; double 64bit)
         float fp = 1.23456789012345678901234567890123456789f; //CE !always suffixing whit small "f" or capital "F"
         float fn = -1.23456789012345678901234567890123456789F;
         double dp = 1.12345678901234567890123456789012345678901234567890d; //suffixing whit small "d" or capital "D"
         double dn = -1.123456789012345678123456789012345678901234567890D;
 
-//        логический тип (булевские значения) размер спецификацией не указан
+
+    //логический тип (булевские значения) размер спецификацией не указан
         boolean bf = false; // логический тип данных
         boolean bt = true;
 
-//        символьный тип ( char 16 bit) from 0 to 65535:
+    //символьный тип ( char 16 bit) from 0 to 65535:
         char letter = 'ы';
         char number = 'l';
 
         //data types with big size can hold types with smaller size. Example: short (2 bytes) = byte; int (4 bytes) = short (2 bytes); long = int; int = char;
         dp = ip;
         dp = letter;
-//      sp = letter; !short can't hold char
+    //sp = letter; !short can't hold char
         ip = letter;
         ip = number;
-//        ip = fp; integer can't hold float but float can hold integer
+    //ip = fp; integer can't hold float but float can hold integer
         fp = ip;
         dp = fp;
-//      fp = bf; !boolean can't convert in any type & any type can't convert to boolean
+    //fp = bf; !boolean can't convert in any type & any type can't convert to boolean
         letter = 65300; // char можно задавать числами т.к. каждому символу соотвествует номер в Unicode. Например здесь выведет: ４
 
 
@@ -62,6 +63,19 @@ public class DataTypes {
         double dHexaDecimal = 0XFF;
         char cHexadecimal = 0xFF;
         byte bHexadecimal = 0x1;
+
+        System.out.println(0x12.4p2d); //d - double
+        /* (1*16^1 + 2*16^0 + 4*16^-1)    * 2^2
+         16 + 2 + 0.25   *4
+         64 + 8 + 1
+         73.0*/
+
+
+        System.out.println(0x12.4p3f); //f - float
+       /* 1*16^1 + 2*16^0 + 4*16^-1      * 2^3
+         16 + 2 + 0.25   * 8
+         146.0*/
+
 
         //Представление символьного типа с помощью кода Unicode uXXXXX
         char cUnicode = '\u0041'; //A
@@ -94,6 +108,15 @@ public class DataTypes {
 
         String d = "123ghj";
         System.out.println(Integer.valueOf(d, 20));
+
+        //экспоненциальная запись
+       /*MEp, где:
+        M — мантисса,
+        E (exponent) — буква E, означающая «*10^» («…умножить на десять в степени…»),
+        p — порядок.*/
+                System.out.println("E-notation " + 10e2);  //10*10^2 = 1000
+        System.out.println("E-notation " + 3e3); //3000
+
 
 
     }

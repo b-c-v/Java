@@ -109,8 +109,9 @@ public class ArithmeticOperators {
 
         /*NaN - Non a Number
          Float, Double classes contains a constant NaN*/
-        double nD = 0.0;
-        double nD1 = 0.0;
+        System.out.println("Begin block NaN");
+        double nD = 0.;
+        double nD1 = .0;
         double nan = nD / nD1; //NAN = NaN
         double nanNegative = -0d / 0d; //nanNegative = NaN
 
@@ -123,6 +124,49 @@ public class ArithmeticOperators {
         System.out.println(Double.NaN != Float.NaN); //true
         System.out.println(10 != Float.NaN); //true
 
+        double xNaN = 7. / 0;
+        System.out.println("xNaN = " + xNaN); //Infinity
+
+        double dNaN = 1 / 0.;
+        System.out.println("dNaN = " + dNaN); //Infinity
+        System.out.println(dNaN * 0); //Infinity*0 = NaN
+        System.out.println(dNaN - dNaN); //Infinity - Infinity = NaN
+
+        double nNaN = dNaN - dNaN;
+        System.out.println(nNaN); //NaN
+        System.out.println("~~~");
+
+        System.out.println(nNaN == n); //false
+        System.out.println(nNaN > nNaN); //false
+        System.out.println(nNaN < nNaN); //false
+        System.out.println(nNaN + 333_333_333); //NaN
+
+        System.out.println("===========End block NaN===========");
+
+        System.out.println("begin block dMax");
+        double dMax = Double.MAX_VALUE;
+        System.out.println(dMax); //1.7976931348623157E308
+        System.out.println(dMax + 100000000); //1.7976931348623157E308
+        System.out.println(dMax == dMax + 100000000); //true
+
+        System.out.println(dMax + dMax); //Infinity
+        System.out.println((dMax + dMax) - (dMax + dMax)); //NaN
+        System.out.println("end block dMax");
+
+        double x = 0.2;
+        double y = 0.7;
+        System.out.println(x + y + " Attention!" ); //0.8999999999999999 Attention!
+        //if you need a precision for arithmetical operation use java.math.BigDecimal or java.math.BigInteger
+
+        int x2 = 2;
+        x2 += 2.5; // (int)(2 + 2.5) = 4
+        System.out.println(x2);
+
+        int x3 = 7 / 2;
+        System.out.println(x3);
+
+        double y3 = 7./ 2; //if use 7/2=3 without dot (C.E. integer division in floating-point context)
+        System.out.println(y3);
 
     }
 }

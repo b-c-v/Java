@@ -40,7 +40,7 @@ public class SpecialTask {
     }
 }
 
-/*if (x == y) {
+/*if (x == y) {фк
 System.out.println("Numbers are equal");
 } else if (x > y && x % y == 0) {
 System.out.println("Общий делитель " + y);
